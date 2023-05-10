@@ -94,6 +94,7 @@ public class QuizService {
                 existSolvedQuiz.setSolved(true);
 
                 user.setSolvedQuizCnt(solvedQuizRepository.countSolvedQuiz(user.getId()));
+                
                 userRepository.save(user);
                 return BasicResponseDto.setSuccess("정답입니다~!", null);
             } else {
